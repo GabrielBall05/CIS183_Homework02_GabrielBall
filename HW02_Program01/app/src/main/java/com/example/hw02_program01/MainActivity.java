@@ -83,6 +83,8 @@ public class MainActivity extends AppCompatActivity
                 Log.d("Button Press", "Save Color Button Pressed");
                 //Add the color to the list
                 AddColor();
+                //Reset
+                ResetToWhite();
                 //Display the colors in the logcat
                 LogColors();
 
@@ -332,5 +334,17 @@ public class MainActivity extends AppCompatActivity
         tv_j_hex.setTextColor(Color.BLACK);
     }
 
-
+    public void ResetToWhite()
+    {
+        //Reset labels, sliders, hex, and background
+        sb_j_red.setProgress(255);
+        sb_j_green.setProgress(255);
+        sb_j_blue.setProgress(255);
+        SetActivityBackgroundColor(255, 255, 255);
+        tv_j_redVal.setText("0");
+        tv_j_greenVal.setText("0");
+        tv_j_blueVal.setText("0");
+        tv_j_hex.setText("FFFFFF");
+        ChangeTextBlack();
+    }
 }

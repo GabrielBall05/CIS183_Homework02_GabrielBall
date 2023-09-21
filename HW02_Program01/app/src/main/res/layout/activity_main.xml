@@ -61,6 +61,7 @@
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="21dp"
         android:max="255"
+        android:progressTint="#10B812"
         app:layout_constraintBottom_toTopOf="@+id/tv_v_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -97,6 +98,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="22dp"
         android:max="255"
+        android:progressTint="#0748B8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_blue" />
@@ -121,6 +123,7 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="25dp"
         android:max="255"
+        android:progressTint="#EA0D53"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_red" />
