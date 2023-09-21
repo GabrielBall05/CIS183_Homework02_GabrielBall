@@ -2,6 +2,9 @@ package com.example.hw02_program01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,8 +43,13 @@ public class MainActivity extends AppCompatActivity
 
 
         SaveColorOnClickListener();
+        RedSeekBarOnChangeListener();
+        GreenSeekBarOnChangeListener();
+        BlueSeekBarOnChangeListener();
     }
 
+
+    //=====SAVE COLOR BUTTON PRESS=====
     public void SaveColorOnClickListener()
     {
         btn_j_saveColor.setOnClickListener(new View.OnClickListener()
@@ -51,11 +59,87 @@ public class MainActivity extends AppCompatActivity
             {
                 Log.d("Button Press", "Save Color Button Pressed");
 
-
             }
         });
     }
 
+    //=====RED SEEK BAR CHANGED=====
+    public void RedSeekBarOnChangeListener()
+    {
+        sb_j_red.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
+        {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b)
+            {
+                int green = sb_j_green.getProgress();
+                int blue = sb_j_blue.getProgress();
+                //Change corresponding text box to the value of the seekbar (i)
+                tv_j_redVal.setText(Integer.toString(i));
+                SetActivityBackgroundColor(i, green, blue);
+                GetHexVal(i, green, blue);
+
+
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+    }
+
+    //=====GREEN SEEK BAR CHANGED=====
+    public void GreenSeekBarOnChangeListener()
+    {
+        sb_j_green.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
+        {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b)
+            {
+                int red = sb_j_red.getProgress();
+                int blue = sb_j_blue.getProgress();
+                //Change corresponding text box to the value of the seekbar (i)
+                tv_j_greenVal.setText(Integer.toString(i));
+                SetActivityBackgroundColor(red, i, blue);
+                GetHexVal(red, i, blue);
+
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+    }
+
+    //=====BLUE SEEK BAR CHANGED=====
+    public void BlueSeekBarOnChangeListener()
+    {
+        sb_j_blue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
+        {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b)
+            {
+                int red = sb_j_red.getProgress();
+                int green = sb_j_green.getProgress();
+                //Change corresponding text box to the value of the seekbar (i)
+                tv_j_blueVal.setText(Integer.toString(i));
+                SetActivityBackgroundColor(red, green, i);
+                GetHexVal(red, green, i);
+
+
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+    }
+
+    //=====CHANGE BACKGROUND COLOR=====
+    public void SetActivityBackgroundColor(int r, int g, int b)
+    {
+        View view = this.getWindow().getDecorView();
+        view.setBackgroundColor(Color.rgb(r, g, b));
+    }
+
+    public void GetHexVal(int r, int g, int b)
+    {
+        String hex = String.format("#%02X%02X%02X", r, g, b);
+        tv_j_hex.setText(hex);
+    }
 
 
 }
