@@ -11,11 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="17dp"
         android:text="FFFFFF"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_v_saveColor"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/tv_v_hexText" />
 
     <TextView
         android:id="@+id/tv_v_red"
@@ -24,6 +25,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="18dp"
         android:text="Red: "
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,8 +34,9 @@
         android:id="@+id/tv_v_redVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="6dp"
         android:text="0"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/sb_v_red"
         app:layout_constraintEnd_toEndOf="@+id/tv_v_greenVal"
@@ -45,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:text="Green: "
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_v_greenVal"
         app:layout_constraintStart_toStartOf="parent" />
@@ -53,8 +57,8 @@
         android:id="@+id/sb_v_green"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
         android:layout_marginBottom="21dp"
         android:max="255"
         app:layout_constraintBottom_toTopOf="@+id/tv_v_blue"
@@ -66,8 +70,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="6dp"
         android:text="0"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/sb_v_green"
         app:layout_constraintStart_toEndOf="@+id/tv_v_green" />
@@ -78,10 +83,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="153dp"
-        android:layout_marginBottom="136dp"
         android:text="Blue: "
+        android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/lv_v_colors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,9 +93,9 @@
         android:id="@+id/sb_v_blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
+        android:layout_marginStart="22dp"
         android:layout_marginTop="7dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="22dp"
         android:max="255"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,6 +108,7 @@
         android:layout_marginStart="21dp"
         android:layout_marginBottom="7dp"
         android:text="0"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/sb_v_blue"
         app:layout_constraintStart_toEndOf="@+id/tv_v_blue" />
@@ -113,7 +118,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="25dp"
         android:max="255"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,11 +126,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_v_red" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_v_hexText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Hex Representation: "
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_v_hex"
         app:layout_constraintStart_toStartOf="parent" />
@@ -135,9 +141,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="62dp"
         android:layout_marginEnd="17dp"
         android:text="SAVE COLOR"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,11 +155,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:fastScrollAlwaysVisible="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_blue" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_saveColor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
