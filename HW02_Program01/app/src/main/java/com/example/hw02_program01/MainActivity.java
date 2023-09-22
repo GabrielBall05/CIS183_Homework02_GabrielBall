@@ -341,9 +341,9 @@ public class MainActivity extends AppCompatActivity
         sb_j_green.setProgress(255);
         sb_j_blue.setProgress(255);
         SetActivityBackgroundColor(255, 255, 255);
-        tv_j_redVal.setText("0");
-        tv_j_greenVal.setText("0");
-        tv_j_blueVal.setText("0");
+        tv_j_redVal.setText("255");
+        tv_j_greenVal.setText("255");
+        tv_j_blueVal.setText("255");
         tv_j_hex.setText("FFFFFF");
         ChangeTextBlack();
     }
